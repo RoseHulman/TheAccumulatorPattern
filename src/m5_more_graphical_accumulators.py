@@ -135,6 +135,34 @@ def run_test_draw_circles_from_rectangle():
     ####################################################################
     # ------------------------------------------------------------------
 
+    title = 'Tests 1 and 2 of draw_circles_from_rectangle function: '
+    window1 = rg.RoseWindow(650, 350, title)
+
+    # Test 1:
+    cornerone = rg.Point(12, 123)
+    cornertwo = rg.Point(23, 345)
+    rectangle = rg.Rectangle(cornerone, cornertwo)
+    rectangle.fill_color = 'green'
+    draw_circles_from_rectangle(7, rectangle, window1)
+
+    # Test 2:
+    corner1 = rg.Point(50, 265)
+    corner2 = rg.Point(68, 356)
+    rectangle = rg.Rectangle(corner1, corner2)
+    draw_circles_from_rectangle(4, rectangle, window1)
+    window1.close_on_mouse_click()
+
+    title = 'Test 3 of draw_circles_from_rectangle function: '
+    window2 = rg.RoseWindow(525, 300, title)
+
+    # Test 3:
+    corner_one = rg.Point()
+    rectangle = rg.Rectangle(rg.Point(50, 50), 10)
+    circle.fill_color = 'blue'
+    draw_squares_from_circle(20, circle, window2)
+
+    window2.close_on_mouse_click()
+
 
 def draw_circles_from_rectangle(m, n, rectangle, window):
     """
