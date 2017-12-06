@@ -98,7 +98,7 @@ def draw_squares_from_circle(n, circle, window):
       :type window: rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # CONSIDER using the ACCUMULATOR IN GRAPHICS pattern,
@@ -173,7 +173,7 @@ def run_test_draw_circles_from_rectangle():
     corner_two = rg.Point(100, 100)
     rectangle = rg.Rectangle(corner_one, corner_two)
     rectangle.fill_color = 'blue'
-    draw_squares_from_circle(15, 20, rectangle, window2)
+    draw_circles_from_rectangle(10, 20, rectangle, window2)
 
     window2.close_on_mouse_click()
 
