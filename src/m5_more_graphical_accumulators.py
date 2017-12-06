@@ -122,7 +122,7 @@ def run_test_draw_circles_from_rectangle():
     print('--------------------------------------------------')
 
     # ------------------------------------------------------------------
-    # TODO: 3. Implement this TEST function.
+    # Done: 3. Implement this TEST function.
     #   It TESTS the  draw_circles_from_rectangle  function
     #   defined below.  Include at least **   3   ** tests, of which
     #      ***  at least TWO tests are on ONE window and
@@ -156,10 +156,11 @@ def run_test_draw_circles_from_rectangle():
     window2 = rg.RoseWindow(525, 300, title)
 
     # Test 3:
-    corner_one = rg.Point()
-    rectangle = rg.Rectangle(rg.Point(50, 50), 10)
-    circle.fill_color = 'blue'
-    draw_squares_from_circle(20, circle, window2)
+    corner_one = rg.Point(50, 50)
+    corner_two = rg.Point(100, 100)
+    rectangle = rg.Rectangle(corner_one, corner_two)
+    rectangle.fill_color = 'blue'
+    draw_squares_from_circle(20, rectangle, window2)
 
     window2.close_on_mouse_click()
 
