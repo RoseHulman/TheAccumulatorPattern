@@ -112,6 +112,18 @@ def draw_squares_from_circle(n, circle, window):
     ####################################################################
     # ------------------------------------------------------------------
 
+    circle.attach_to(window)
+    length = circle.radius
+
+    for _ in range(n):
+        center = rg.Point(circle.center.x, circle.center.y)
+        square = rg.Square(center, length)
+        square.attach_to(window)
+        circle.center.x = circle.center.x - length/2
+        circle.center.y = circle.center.y - length/2
+
+    window.render()
+
 
 def run_test_draw_circles_from_rectangle():
     """ Tests the   draw_circles_from_rectangle  function. """
@@ -143,13 +155,13 @@ def run_test_draw_circles_from_rectangle():
     cornertwo = rg.Point(23, 345)
     rectangle = rg.Rectangle(cornerone, cornertwo)
     rectangle.fill_color = 'green'
-    draw_circles_from_rectangle(7, rectangle, window1)
+    draw_circles_from_rectangle(3, 7, rectangle, window1)
 
     # Test 2:
     corner1 = rg.Point(50, 265)
     corner2 = rg.Point(68, 356)
     rectangle = rg.Rectangle(corner1, corner2)
-    draw_circles_from_rectangle(4, rectangle, window1)
+    draw_circles_from_rectangle(4, 10,  rectangle, window1)
     window1.close_on_mouse_click()
 
     title = 'Test 3 of draw_circles_from_rectangle function: '
@@ -160,7 +172,7 @@ def run_test_draw_circles_from_rectangle():
     corner_two = rg.Point(100, 100)
     rectangle = rg.Rectangle(corner_one, corner_two)
     rectangle.fill_color = 'blue'
-    draw_squares_from_circle(20, rectangle, window2)
+    draw_squares_from_circle(15, 20, rectangle, window2)
 
     window2.close_on_mouse_click()
 
